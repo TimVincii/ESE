@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <PublishSingleFile>true</PublishSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>ese_icon.ico</ApplicationIcon>
+    <Title>ESE</Title>
+    <Authors>TimVinci</Authors>
+    <Description>An External Settings Editor for Fortnite.</Description>
+    <Version>1.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ese_icon.ico" />
+  </ItemGroup>
+
+</Project>
