@@ -44,6 +44,7 @@ partial class EditorWindow
         Tooltip = new ToolTip(components);
         ReadOnlyCheckbox = new CheckBox();
         RevertButton = new Button();
+        LinkLabel = new LinkLabel();
         TitleGraphics = new Label();
         BrightnessLabel = new Label();
         BrightnessTrackBar = new TrackBar();
@@ -65,6 +66,7 @@ partial class EditorWindow
         BrightnessValueLabel = new Label();
         ContrastValueLabel = new Label();
         ThreeDResolutionValueLabel = new Label();
+        VersionLabel = new Label();
         ((System.ComponentModel.ISupportInitialize)BrightnessTrackBar).BeginInit();
         ((System.ComponentModel.ISupportInitialize)ContrastTrackBar).BeginInit();
         ((System.ComponentModel.ISupportInitialize)ThreeDResolutionTrackBar).BeginInit();
@@ -240,6 +242,20 @@ partial class EditorWindow
         Tooltip.SetToolTip(RevertButton, "If you've made any changes without saving, and would like to revert\r\nthe state of the settings displayed here back to your original Fortnite settings, click here.");
         RevertButton.UseVisualStyleBackColor = false;
         RevertButton.Click += RevertButton_Click;
+        // 
+        // LinkLabel
+        // 
+        LinkLabel.ActiveLinkColor = Color.RoyalBlue;
+        LinkLabel.AutoSize = true;
+        LinkLabel.LinkColor = SystemColors.Highlight;
+        LinkLabel.Location = new Point(325, 26);
+        LinkLabel.Name = "LinkLabel";
+        LinkLabel.Size = new Size(103, 15);
+        LinkLabel.TabIndex = 43;
+        LinkLabel.TabStop = true;
+        LinkLabel.Text = "Check for updates";
+        Tooltip.SetToolTip(LinkLabel, "https://github.com/TimVincii/ESE/releases");
+        LinkLabel.LinkClicked += LinkLabel_LinkClicked;
         // 
         // TitleGraphics
         // 
@@ -494,12 +510,25 @@ partial class EditorWindow
         ThreeDResolutionValueLabel.TabIndex = 41;
         ThreeDResolutionValueLabel.Text = "(0)";
         // 
+        // VersionLabel
+        // 
+        VersionLabel.AutoSize = true;
+        VersionLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+        VersionLabel.ForeColor = Color.White;
+        VersionLabel.Location = new Point(351, 8);
+        VersionLabel.Name = "VersionLabel";
+        VersionLabel.Size = new Size(52, 15);
+        VersionLabel.TabIndex = 42;
+        VersionLabel.Text = "ESE V1.0";
+        // 
         // EditorWindow
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(25, 25, 25);
         ClientSize = new Size(440, 576);
+        Controls.Add(LinkLabel);
+        Controls.Add(VersionLabel);
         Controls.Add(ThreeDResolutionValueLabel);
         Controls.Add(ContrastValueLabel);
         Controls.Add(BrightnessValueLabel);
@@ -586,4 +615,6 @@ partial class EditorWindow
     private Label BrightnessValueLabel;
     private Label ContrastValueLabel;
     private Label ThreeDResolutionValueLabel;
+    private Label VersionLabel;
+    private LinkLabel LinkLabel;
 }

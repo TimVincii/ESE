@@ -5,6 +5,8 @@
 
 ESE is an External Settings Editor designed for Fortnite, providing users with additional control over various in-game settings. As of now, the editor supports Performance Mode only.
 
+You can see a demonstration of ESE in this [YouTube video.](https://youtu.be/vTWFTN6B9LA)
+
 ## Features
 
   ![ese_window](images/ese_window.png)

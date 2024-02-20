@@ -1,4 +1,5 @@
 using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
 
@@ -388,5 +389,15 @@ public partial class EditorWindow : Form
     private void ThreeDResolutionTrackBar_Scroll(object sender, EventArgs e)
     {
         ThreeDResolutionValueLabel.Text = "(" + ThreeDResolutionTrackBar.Value + ")";
+    }
+
+    private void LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+        var psi = new ProcessStartInfo
+        {
+            FileName = "https://github.com/TimVincii/ESE/releases",
+            UseShellExecute = true
+        };
+        Process.Start(psi);
     }
 }
